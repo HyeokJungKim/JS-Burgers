@@ -71,3 +71,8 @@ burgers = [
   ]
 
 Burger.create(burgers)
+
+User.create(name: "Eric", amount: 10000000)
+User.create(name: "Rei", amount: 10000000)
+User.create(name: "Sylwia", amount: 10000000)
+User.create(name: "Mazen", amount: 10000000)

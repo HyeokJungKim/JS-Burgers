@@ -31,11 +31,13 @@ function handleNewOrderForm(evt){
 
 function handleCreateBurger(evt){
   evt.preventDefault()
-  let name = evt.target.name.value
-  let description = evt.target.description.value
-  let image = evt.target.image.value
-  let price = evt.target.price.value
-  let category_id = evt.target.category_id.value
+  let form = evt.target
+  
+  let name = form.name.value
+  let description = form.description.value
+  let image = form.image.value
+  let price = form.price.value
+  let category_id = form.category_id.value
 
   let newBurgerObj = {
     name,
@@ -50,7 +52,7 @@ function handleCreateBurger(evt){
     let foundCategory = Category.all.find(category => category.id === newBurger.category_id)
     foundCategory.burgers.push(newBurger)
     new Burger(newBurger)
-    evt.target.reset()
+    form.reset()
   })
 
 
