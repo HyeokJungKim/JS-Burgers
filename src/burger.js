@@ -4,6 +4,7 @@ class Burger {
     this.name = burger.name
     this.image = burger.image
     this.price = burger.price
+    this.category_id = burger.category_id
     this.description = burger.description
 
     this.outerDiv = document.createElement('div')

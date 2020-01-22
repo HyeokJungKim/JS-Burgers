@@ -18,11 +18,13 @@ class Category {
   }
 
   handleClick = () => {
-    burgerMenuDiv.innerHTML = ""
-    newBurgerForm["category_id"].value = this.id
-    this.burgers.forEach(burger => {
-      new Burger(burger)
-    })
+    if (parseInt(newBurgerForm["category_id"].value) !== this.id) {
+      burgerMenuDiv.innerHTML = ""
+      newBurgerForm["category_id"].value = this.id
+      this.burgers.forEach(burger => {
+        new Burger(burger)
+      })
+    }
   }
 
 }
